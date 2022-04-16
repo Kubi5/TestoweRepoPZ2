@@ -1,0 +1,12 @@
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\bin\Debug\AddressBook.mdb
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\bin\Debug\DatabaseViewer.exe.config
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\bin\Debug\DatabaseViewer.exe
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\bin\Debug\DatabaseViewer.pdb
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.csproj.AssemblyReference.cache
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.csproj.SuggestedBindingRedirects.cache
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.Form1.resources
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.Properties.Resources.resources
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.csproj.GenerateResource.cache
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.csproj.CoreCompileInputs.cache
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.exe
+C:\Users\FiFi\source\repos\DatabaseViewer\DatabaseViewer\obj\Debug\DatabaseViewer.pdb
