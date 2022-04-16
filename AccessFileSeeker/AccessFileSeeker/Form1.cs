@@ -16,5 +16,16 @@ namespace AccessFileSeeker
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = new DialogResult();
+
+            saveFileDialog1.Title = "Select a Database File";
+            saveFileDialog1.Filter = "MDB Files (*.mdb) | (*.mdb)";
+            saveFileDialog1.CheckFileExists = true;
+
+            dialogResult = saveFileDialog1.ShowDialog();
+        }
     }
 }

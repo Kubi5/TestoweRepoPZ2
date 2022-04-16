@@ -1,0 +1,11 @@
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\bin\Debug\AccessFileSeeker.exe.config
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\bin\Debug\AccessFileSeeker.exe
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\bin\Debug\AccessFileSeeker.pdb
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.csproj.AssemblyReference.cache
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.csproj.SuggestedBindingRedirects.cache
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.Form1.resources
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.Properties.Resources.resources
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.csproj.GenerateResource.cache
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.csproj.CoreCompileInputs.cache
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.exe
+C:\Users\FiFi\TestoweRepoPZ2\AccessFileSeeker\AccessFileSeeker\obj\Debug\AccessFileSeeker.pdb
