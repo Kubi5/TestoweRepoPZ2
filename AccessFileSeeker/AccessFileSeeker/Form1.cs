@@ -14,6 +14,9 @@ namespace AccessFileSeeker
     public partial class Form1 : Form
     {
         OleDbConnection dbConnection;
+        OleDbDataAdapter dbAdapter = new OleDbDataAdapter();
+        BindingSource MyBindingSource = new BindingSource();
+        DataTable MyDataTable = new DataTable();
 
         public Form1()
         {
@@ -61,6 +64,47 @@ namespace AccessFileSeeker
                     listBox1.Items.Add(schemaTable.Rows[i].ItemArray[2].ToString());
                 }
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sFieldInfo;
+            string sDataType;
+            string sTableName;
+
+            sTableName = listBox1.Items[listBox1.SelectedIndex].ToString();
+            OleDbCommand selectCMD = new OleDbCommand("Select * FROM" + "[" + sTableName + "]", dbConnection);
+
+            dbAdapter.SelectCommand = selectCMD;
+
+            DataSet dbDataSet = new DataSet();
+
+            dbAdapter.Fill(dbDataSet,sTableName);
+
+            listBox2.Items.Clear();
+
+            for(int i = 0; i< dbDataSet.Tables[0].Columns.Count - 1; i++)
+            {
+                var value = dbDataSet.Tables[0].Columns[i];
+
+                sDataType = value.DataType.ToString().Substring(value.DataType.ToString().LastIndexOf("."));
+
+                sFieldInfo = value.ColumnName.ToString() + "--" + sDataType;
+
+                listBox2.Items.Add(sFieldInfo);
+            }
+
+            dbAdapter.Fill(MyDataTable);
+
+            MyBindingSource.DataSource = MyDataTable;
+
+            dataGridView1.DataSource = MyBindingSource;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
