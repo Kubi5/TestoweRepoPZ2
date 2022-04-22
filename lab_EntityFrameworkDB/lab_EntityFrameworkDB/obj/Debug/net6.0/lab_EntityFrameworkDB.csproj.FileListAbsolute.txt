@@ -1,0 +1,15 @@
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\bin\Debug\net6.0\lab_EntityFrameworkDB.exe
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\bin\Debug\net6.0\lab_EntityFrameworkDB.deps.json
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\bin\Debug\net6.0\lab_EntityFrameworkDB.runtimeconfig.json
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\bin\Debug\net6.0\lab_EntityFrameworkDB.dll
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\bin\Debug\net6.0\lab_EntityFrameworkDB.pdb
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.csproj.AssemblyReference.cache
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.AssemblyInfoInputs.cache
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.AssemblyInfo.cs
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.csproj.CoreCompileInputs.cache
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.dll
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\refint\lab_EntityFrameworkDB.dll
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.pdb
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\lab_EntityFrameworkDB.genruntimeconfig.cache
+C:\Users\FiFi\TestoweRepoPZ2\lab_EntityFrameworkDB\lab_EntityFrameworkDB\obj\Debug\net6.0\ref\lab_EntityFrameworkDB.dll
