@@ -7,7 +7,7 @@
       <Diagram DiagramId="1987ec15bb2f48638413f41b262fab6b" Name="Diagram1" ZoomLevel="98">
         <EntityTypeShape EntityType="SoftUniModel.Addresses" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SoftUniModel.Departments" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SoftUniModel.Employees" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoftUniModel.Employees" Width="1.5" PointX="5.375" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SoftUniModel.Projects" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SoftUniModel.Towns" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
         <AssociationConnector Association="SoftUniModel.FK_Addresses_Towns" ManuallyRouted="false" />
