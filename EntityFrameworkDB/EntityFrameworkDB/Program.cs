@@ -151,26 +151,203 @@ namespace EntityFrameworkDB
                 var addresses = from adr in context.Addresses
                                 join emp in context.Employees
                                 on adr.AddressID equals emp.AddressID
-                                group new { adr, emp } by new { adr.AddressText } into g
+                                join town in context.Towns
+                                on adr.TownID equals town.TownID
+                                group new { adr, emp, town } by new { adr.AddressText } into g
                                 let r = g.FirstOrDefault()
-                                orderby g.Count() descending
+                                orderby g.Count() descending, r.town.Name, r.adr.AddressText
                                 select new
                                 {
                                     addressText = r.adr.AddressText,
-                                    count = g.Count()
-                                    
+                                    count = g.Count(),
+                                    townText = r.town.Name
                                 };
                        
                 foreach(var address in addresses.Take(10))
                 {
-                    Console.WriteLine(address.addressText + " - " + address.count + " employee/s");
+                    Console.WriteLine(address.addressText + 
+                        ", " + address.townText + " - " + address.count + " employee/s");
                 }
-                    */
-                
+                   */
+
                 //ZADANIE 7
 
+                /*
+                var data = context.Employees
+                    .Where(e => e.EmployeeID == 147)
+                    .Select(e => new { e.FirstName, e.LastName, e.JobTitle,
+                        lista = e.Projects.Select(f => f.Name).OrderBy(f => f).ToList() });
 
-            
+                foreach (var emp in data)
+                {
+                    Console.WriteLine(emp.FirstName + " " + emp.LastName + " - " + emp.JobTitle);
+
+                    foreach(var pro in emp.lista)
+                    {
+                        Console.WriteLine(pro);
+                    }
+                }
+                */
+
+                //ZADANIE 8  (nie sortuje ze wzgl na il mieszkancow ?? )
+
+                /*
+                var list = context.Departments
+                            .Select(x => new
+                            {
+                                workers = x.Employees1.Select(z => new { z.FirstName, z.LastName, z.JobTitle })
+                                .OrderBy(z => z.FirstName).ThenBy(z => z.LastName).ToList(),
+                                x.Employees.FirstName,
+                                x.Employees.LastName,
+                                name = x.Name,
+                                count = x.Employees1.Count()
+                            })
+                            .OrderBy(x => x.count)
+                            .ThenBy(x => x.name)
+                            .Where(x => x.count > 5)
+                            .GroupBy(x => x.name)
+                            .ToList();
+                            
+                            
+                foreach(var data in list)
+                {
+                    foreach(var item in data.ToList())
+                    {
+                        Console.WriteLine(item.name + " - " + item.FirstName + " " + item.LastName + " " + item.count);
+
+                        foreach(var worker in item.workers)
+                        {
+                            Console.WriteLine(worker.FirstName + " " + worker.LastName + " - " + worker.JobTitle);
+                        }
+
+                        Console.WriteLine("----------");
+                    }
+                }
+                */
+
+                //ZADANIE 9
+
+                /*
+                var data = context.Projects
+                            .Select(x => x)
+                           .OrderByDescending(p => p.StartDate)
+                           .Take(10)
+                           .OrderBy(p => p.Name);
+
+                foreach (var entity in data)
+                {
+                    Console.WriteLine($"{entity.Name} \n");
+                    Console.WriteLine($"{entity.Description} \n");
+                    Console.WriteLine($"{entity.StartDate} \n");
+                }
+                */
+
+                //ZADANIE 10
+
+                /*
+                var EMPlist = context.Employees
+                            .Join(context.Departments, e => e.DepartmentID, d => d.DepartmentID,
+                            (e, d) => new { e.FirstName, e.LastName, e.Salary, d.Name, e.EmployeeID })
+                            .OrderBy(x => x.FirstName)
+                            .ThenBy(x => x.LastName)
+                            .Where(x => x.Name == "Enginnering" || x.Name == "Tool Design" ||
+                            x.Name == "Marketing" || x.Name == "Information Services")
+                            .Select(x => x.EmployeeID);
+
+                foreach(var data in EMPlist)
+                {
+                    context.Employees.Find(data).Salary *= (decimal)1.12;
+                }
+                context.SaveChanges();
+
+                foreach (var entity in EMPlist)
+                {
+                    var data = context.Employees.Find(entity);
+                    Console.WriteLine($"{data.FirstName} {data.LastName} (${Math.Round(data.Salary,2)})");
+                }
+                */
+
+                //ZADANIE 11
+
+                /*
+                var data = context.Employees
+                           .Where(x => x.FirstName.StartsWith("Sa"))
+                           .Select(x => x)
+                           .OrderBy(x => x.FirstName)
+                           .ThenBy(x => x.LastName);
+
+                foreach (var entity in data)
+                {
+                    Console.WriteLine($"{entity.FirstName} {entity.LastName} - " +
+                        $"{entity.JobTitle} - (${Math.Round(entity.Salary,2)})");
+                }
+                */
+
+                //ZADANIE 12
+                /*
+                context.Projects.Remove(context.Projects.Find(2));
+                context.SaveChanges();
+
+
+
+                foreach(var project in context.Projects.Take(10))
+                {
+                    Console.WriteLine($"{project.Name}   {project.ProjectID}");
+                }
+                */
+
+                //ZADANIE 13
+
+                string CitytoDelete = Console.ReadLine();
+
+                var EMPdata = from emp in context.Employees
+                              join adr in context.Addresses
+                              on emp.AddressID equals adr.AddressID
+                              join town in context.Towns
+                              on adr.TownID equals town.TownID
+                              where town.Name == CitytoDelete
+                              select emp.EmployeeID;
+
+                //ustawienie adresów ludzi na null
+                foreach(var e in EMPdata)
+                {
+                    context.Employees.Find(e).AddressID = null;
+                }
+
+                //usuniecie tych adresow
+                var addressesToDEL = from adr in context.Addresses
+                                     join town in context.Towns
+                                     on adr.TownID equals town.TownID
+                                     where town.Name == CitytoDelete
+                                     select adr.AddressID;
+
+                int howManyAddressesWasDeleted = 0;
+                foreach(var data in addressesToDEL)
+                {
+                    context.Addresses.Remove(context.Addresses.Find(data));
+                    howManyAddressesWasDeleted++;
+                }
+                context.SaveChanges();
+
+                //usunienie miasta
+
+                Console.WriteLine($"Numbers of town in database before deleting: {context.Towns.Count()}");
+                context.Towns.Remove(context.Towns.Where(x => x.Name == CitytoDelete).SingleOrDefault());
+
+                context.SaveChanges();
+                Console.WriteLine($"Numbers of town in database after deleting: {context.Towns.Count()}");
+
+
+                //wyswietlenie na konsole
+                if (howManyAddressesWasDeleted <= 1)
+                {
+                    Console.WriteLine($"{howManyAddressesWasDeleted} address in {CitytoDelete} was deleted");
+                }
+                else
+                {
+                    Console.WriteLine($"{howManyAddressesWasDeleted} addressess in {CitytoDelete} was deleted");
+                }
+
 
 
             }
