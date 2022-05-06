@@ -58,18 +58,19 @@ namespace EntityFrameworkDB
 
                 //ZADANIE 4
 
-                /*
                 Addresses newAddress = new Addresses
                 {
                     AddressID = 501,
                     AddressText = "Warszawa, Krakowska 41"
                 };
-
+                /*
                 Console.WriteLine(context.Addresses.Count().ToString());
+
                 context.Addresses.Add(newAddress);
                 context.SaveChanges();
-                Console.WriteLine(context.Addresses.Count().ToString());
                 */
+                Console.WriteLine(context.Addresses.Count().ToString());
+                
                 /*
                 
                 //biore id pracownika do zmiany
@@ -297,7 +298,7 @@ namespace EntityFrameworkDB
                 */
 
                 //ZADANIE 13
-
+                /*
                 string CitytoDelete = Console.ReadLine();
 
                 var EMPdata = from emp in context.Employees
@@ -348,7 +349,7 @@ namespace EntityFrameworkDB
                     Console.WriteLine($"{howManyAddressesWasDeleted} addressess in {CitytoDelete} was deleted");
                 }
 
-
+                */
 
             }
         }
